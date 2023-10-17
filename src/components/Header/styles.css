@@ -1,0 +1,40 @@
+body {
+    font-family: Helvetica;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  .site-header { 
+    border-bottom: 4px solid rgb(187, 165, 207);
+    padding: .5em 1em;
+    display: flex;
+    justify-content: space-between;
+    background-color: #000;
+  }
+  
+  .site-identity h1 {
+    font-size: 1.5em;
+    margin: .6em 0;
+    display: inline-block;
+  }
+  
+  
+  .site-navigation ul, 
+  .site-navigation li {
+    margin: 0; 
+    padding: 0;
+  }
+  
+  .site-navigation li {
+    display: inline-block;
+    margin: 1.4em 1em 1em 1em;
+  }
+
+  .header-name, .list-nav{
+    color:rgb(187, 165, 207);
+  }
+
+  .header-name.active, .list-nav.active{
+    color:rgb(245, 136, 255)
+  }
