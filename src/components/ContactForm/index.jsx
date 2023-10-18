@@ -1,11 +1,9 @@
 import css from "./ContactForm.module.css";
 import { useDispatch, useSelector } from 'react-redux';
-import { Outlet } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Notiflix from "notiflix";
-import * as contactsOperations from "redux/contacts/contactsOperations";
-import { contactsSelectors } from "redux/contacts";
-import image from '../../images/no-image.jpg';
+import contactsSelectors from 'redux/contacts/contactsSelectors';
+import contactsOperations from 'redux/contacts/contactsOperations';
 
 
 const ContactForm = () => {
@@ -21,13 +19,15 @@ const ContactForm = () => {
     e.preventDefault();
     const number = e.currentTarget.elements.number.value;
     const name = e.currentTarget.elements.name.value;
-    if (contacts.find(contact => contact.number === number))
-      Notiflix.Notify.failure("This contact exists!")
-    else {
-      const newUser = { name: name, number: number, avatar: image };
-      await dispatch(contactsOperations.addContact(newUser));
-      await setTemp(number);
-    }
+    if (contacts) {
+      if (contacts.find(contact => contact.number === number))
+        Notiflix.Notify.failure("This contact exists!")
+      else {
+        await dispatch(contactsOperations.addContact({ name: name, number: number }));
+        await setTemp(number);
+      }
+    } else dispatch(contactsOperations.addContact({ name: name, number: number }));
+
 
     const form = e.target;
     form.reset();
@@ -57,7 +57,7 @@ const ContactForm = () => {
         />
       </div>
       <button type="submit">Add Contact</button>
-    </form> <Outlet></Outlet></section>);
+    </form></section>);
 }
 
 export default ContactForm;

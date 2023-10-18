@@ -23,7 +23,7 @@ ul {
   border-radius: 10px;
 }
 
-li {
+.contact_list_item {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -31,11 +31,10 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   margin-bottom: 20px;
 }
 
-li > p {
+.contact_list_item > p {
   margin-right: 20px;
   margin-left: 10px;
 }
