@@ -48,7 +48,7 @@ const Login = () => {
                 <button className="login-button">LOGIN</button>
                 <div className="link">
                     Not a member?
-                    <a href="/goit-react-hw-08-phonebook/register">Sign Up!</a>
+                    <a href="/goit-react-hw-08-phonebook/register"> Sign Up!</a>
                 </div>
             </form>
         </div></>)
