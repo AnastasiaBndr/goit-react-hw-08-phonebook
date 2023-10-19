@@ -56,7 +56,7 @@ const ContactForm = () => {
           className={css.number__input}
         />
       </div>
-      <button type="submit">Add Contact</button>
+      <button type="submit">Add</button>
     </form></section>);
 }
 

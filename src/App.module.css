@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
-
 .contact__container {
-  font-family: Caveat;
   font-size: 20px;
   position: fixed;
   top: 50%;
@@ -29,4 +26,11 @@
     max-width: 60%;
     max-height: 80%;
   }
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% -50%);
 }

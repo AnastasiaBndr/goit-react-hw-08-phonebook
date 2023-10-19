@@ -1,0 +1,19 @@
+﻿.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.welcome-text {
+  text-align: center;
+  color: rgb(245, 136, 255);
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+}
+.custom-message {
+  color: black;
+  font-style: italic;
+  margin-top: 20px;
+}
